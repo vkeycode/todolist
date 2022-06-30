@@ -7,12 +7,12 @@ let ulDOM = document.querySelector('#list')
 
 function formSubmit(event){ // form submit event
         
-        event.preventDefault() //defaul none so no refresh page
+        event.preventDefault() // dont do default process
         
-        let formText = document.querySelector('#Notes') 
+        let formText = document.querySelector('#Notes') // select #Notes after assign in FormText
         localStorage.setItem('notes', formText.value)  // set local storage value
         if(formText.value == ''){
-                alert("Lütfen Bir Yapılacak Durum Giriniz") // if formText.value is empty
+                alert("Lütfen Bir Yapılacak Durum Giriniz") // if formText.value empty write this alert
         }
         else{
         formText.value = '' // delete formText.value
@@ -31,7 +31,7 @@ function formSubmit(event){ // form submit event
 }
 
 function removeTask(e){
-        e.parentNode.parentNode.removeChild(e.parentNode); // removeTask is call 
+        e.parentNode.parentNode.removeChild(e.parentNode); // removeTask
 }
 
 
